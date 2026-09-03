@@ -7,16 +7,16 @@ Fully portable — satu folder, berjalan tanpa perlu menginstal Python maupun Te
 ## Fitur
 
 - **OCR otomatis** menggunakan Tesseract OCR yang sudah dibundel di dalam folder.
-- **Deteksi ID 16 digit** — semua angka, tanpa batasan awalan tertentu.
-- **Auto-rotasi 4 orientasi** (0/90/180/270 derajat) — gambar hasil disimpan dalam posisi tegak lurus.
+- **Deteksi ID 16 digit** — deteksi ID SLS otomatis dari hasil scan peta.
+- **Auto-rotasi 4 orientasi** (0/90/180/270 derajat) — gambar hasil disimpan dalam rotasi yang sesuai (input tidak perlu di rotasi manual).
 - Hasil rename dipindahkan ke folder `output`.
-- File yang **gagal** ditemukan ID-nya dibiarkan tetap di folder `input` untuk direname manual.
-- **Cegah duplikat** — jika ID sudah ada di folder `output`, file dilewati (LEWATI).
+- File yang **gagal** ditemukan ID-nya akan dibiarkan tetap di folder `input` untuk direname manual.
+- **Cegah duplikat** — jika ID sudah ada di folder `output`, file dilewati (LEWATI) dan tetap di folder input.
 - **Portable** — tidak perlu instalasi Python, Tesseract, atau dependensi lain.
 
 ## Cara Pakai
 
-1. Salin seluruh folder ini ke lokasi mana pun di komputer Anda.
+1. Salin seluruh repo ini ke lokasi mana pun di komputer Anda.
 2. Letakkan semua gambar scan (`.png`, `.jpg`, `.jpeg`) ke dalam folder `input`.
 3. Jalankan `RenameSLS.exe`.
 4. Hasilnya ada di folder `output` (file sudah direname dan diputar tegak lurus). Gambar yang gagal terdeteksi ID-nya tetap berada di folder `input`.
@@ -35,7 +35,7 @@ RenameSLS/
 ## Persyaratan Sistem
 
 - Windows 64-bit.
-- Tidak perlu menginstal Python, Tesseract, atau pustaka lain.
+- Tidak perlu menginstal Python, Tesseract, atau library lain.
 
 ## Catatan Antivirus
 
