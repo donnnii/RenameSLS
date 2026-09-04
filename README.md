@@ -1,9 +1,6 @@
 # RenameSLS
 
-![Screenshot](https://bps3320.my.id/image/rename_sls.jpg)
-![Screenshot](https://bps3320.my.id/image/Screenshot%202026-09-03%20142953.png)
-
-Alat rename otomatis untuk gambar scan peta SLS berbasis OCR. Aplikasi membaca ID **16 digit angka** dari gambar scan, merotasi gambar agar teks tegak lurus, lalu menamai ulang file sesuai ID tersebut.
+Alat rename otomatis untuk gambar scan peta SLS berbasis OCR. Aplikasi membaca ID **16 digit angka** dari gambar scan, merotasi gambar agar teks tegak lurus, lalu menamai ulang file dengan format **`ID_WSS`** (contoh: `1234567890123456_WSS.jpg`).
 
 Fully portable — satu folder, berjalan tanpa perlu menginstal Python maupun Tesseract OCR.
 
@@ -11,11 +8,12 @@ Fully portable — satu folder, berjalan tanpa perlu menginstal Python maupun Te
 
 - **OCR otomatis** menggunakan Tesseract OCR yang sudah dibundel di dalam folder.
 - **Deteksi ID 16 digit** — semua angka, tanpa batasan awalan tertentu.
+- **Format hasil rename**: `{ID}_WSS` (contoh `1234567890123456_WSS.jpg`).
 - **Auto-rotasi 4 orientasi** (0/90/180/270 derajat) — gambar hasil disimpan dalam posisi tegak lurus.
 - **Proses paralel adaptif** — jumlah worker menyesuaikan kemampuan PC secara otomatis (inti CPU & RAM), sehingga tetap ringan di komputer berspesifikasi rendah.
 - Hasil rename dipindahkan ke folder `output`.
 - File yang **gagal** ditemukan ID-nya dibiarkan tetap di folder `input` untuk direname manual.
-- **Cegah duplikat** — jika ID sudah ada di folder `output`, file dilewati (LEWATI).
+- **Cegah duplikat** — jika nama hasil sudah ada di folder `output`, file dilewati (LEWATI).
 - **Portable** — tidak perlu instalasi Python, Tesseract, atau dependensi lain.
 
 ## Cara Pakai
@@ -23,7 +21,7 @@ Fully portable — satu folder, berjalan tanpa perlu menginstal Python maupun Te
 1. Salin seluruh folder ini ke lokasi mana pun di komputer Anda.
 2. Letakkan semua gambar scan (`.png`, `.jpg`, `.jpeg`) ke dalam folder `input`.
 3. Jalankan `RenameSLS.exe`.
-4. Hasilnya ada di folder `output` (file sudah direname dan diputar tegak lurus). Gambar yang gagal terdeteksi ID-nya tetap berada di folder `input`.
+4. Hasilnya ada di folder `output` (file direname dengan format `{ID}_WSS` dan diputar tegak lurus). Gambar yang gagal terdeteksi ID-nya tetap berada di folder `input`.
 
 > **Penting:** gunakan `RenameSLS.exe`, bukan `rename.py`. File `.py` hanya untuk pengembangan.
 
