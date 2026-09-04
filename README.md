@@ -1,6 +1,7 @@
 # RenameSLS
 
 ![RenameSLS](https://bps3320.my.id/image/rename_sls.jpg)
+![RenameSLS](https://bps3320.my.id/image/Screenshot%202026-09-04%20085259.png)
 
 Alat rename otomatis untuk gambar scan peta SLS berbasis OCR. Aplikasi membaca ID **16 digit angka** dari gambar scan, merotasi gambar agar teks tegak lurus, lalu menamai ulang file dengan format **`ID_WSS`** (contoh: `1234567890123456_WSS.jpg`).
 
